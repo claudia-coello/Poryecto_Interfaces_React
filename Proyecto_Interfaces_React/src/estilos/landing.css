@@ -1,0 +1,97 @@
+.cuerpo {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  background-image: url("../assets/fondo-inicio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 600px;
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: #00aaff;
+  /* azul como en tu imagen */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card-text p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.card-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-text li {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.box-container {
+  background-color: aliceblue;
+  border-radius: 10px;
+}

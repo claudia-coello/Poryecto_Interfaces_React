@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    flex-direction: column;   /* coloca los elementos uno debajo del otro */
+    justify-content: space-between; /* distribuye nav arriba y footer abajo */
+    min-height: 100vh;        /* ocupa toda la altura de la pantalla */
+    /* background-color: rgba(47, 82, 134, 0.998); */
+}
+
+/* ---CONTENEDOR PRINCIPAL DEL FORMULARIO DE RECUPERACIÓN ---- */
+
+.recover-password-container {
+    display: flex; /* Activa flexbox para centrar contenido */
+    flex-direction: column;      /* mantiene los elementos en columna */
+    justify-content: center;     /* centra verticalmente */
+    align-items: center;         /* centra horizontalmente */
+    min-height: 80vh;            /* ocupa casi toda la pantalla */
+    text-align: center; 
+    max-width: 400px;  /* Ancho máximo */
+    background-color: white; 
+    border: 2px solid rgba(255, 255, 255, .2);  /* Borde tenue */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);    /* Sombra */
+    color: #000000;
+    border-radius: 10px;
+    padding: 50px 50px;  /* Espaciado interno */
+    font-size: 16px;
+    gap: 20px;
+    box-sizing: border-box;   /* Incluye borde y padding */
+    margin: 120px auto 10px;
+}
+
+/* Efecto al presionar el botón */
+.recover-password-container button:active {
+    scale: 0.95;  /* Reduce tamaño al hacer clic */
+}
+
+/* Título del formulario */
+.recover-password-container .form-title {
+    text-align: center;
+    font-weight: 600;  /* Texto semi-negrita */
+    font-size: 25px;
+    color: #000000;
+}
+
+/* Descripción del formulario */
+.recover-password-container .form-description {
+    color: #716e6e;
+}
+
+/* Contenedor del formulario */
+.recover-password-container .form {
+    display: flex; /* Usa modelo flexible */
+    flex-direction: column;   /* Elementos en columna */
+
+}
+
+.recover-password-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Espacio entre elementos */
+    margin-bottom: 17px;  /* Separación inferior */
+}
+
+/* Estilo para las etiquetas del formulario */
+.recover-password-container .form-group label {
+    margin-bottom: 3px;  /* Espacio debajo del texto */
+    font-weight: 500;
+    color: #000000;
+
+}
+
+/* Estilo para los campos de entrada */
+.recover-password-container .form-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;  /* Quita el borde  al hacer clic */
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;   /* Suaviza cambios de color o sombra */
+}
+
+/* Efecto al enfocar el campo de entrada */
+
+.recover-password-container .form-group input:focus {
+    border-color: rgb(20, 43, 110);  /* Cambia el color del borde */
+    box-shadow: 0 0 4px rgb(0, 31, 64);  /* Agrega un brillo azul alrededor */
+}
+
+/* Botón de envío del formulario */
+.recover-password-container .form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(47, 82, 134, 0.998);
+    border: none;
+    width: 100%;  /* Ocupa todo el ancho */
+    padding: 12px 50px;
+    font-size: inherit;  /* Usa el tamaño de fuente del contenedor */
+    gap: 8px;
+    margin: 12px 0;  /* Espacio vertical */
+    cursor: pointer;  /* Muestra el puntero al pasar el mouse */
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px #00000015, 0px 2px 3px #0000002b;
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.recover-password-container .form-submit-btn:hover {
+    background-color: #73b1e4;
+
+}
+
+/* Enlace con color naranja */
+.recover-password-container .link {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+/* Centra el texto del enlace de registro */
+.recover-password-container .signup-link {
+    align-self: center;
+    font-weight: 500;
+}
+
+/* Ajusta el peso del texto del enlace */
+.recover-password-container .signup-link .link {
+    font-weight: 400;
+}
+
+/* Subraya al pasar el cursor */
+.recover-password-container .link:hover {
+    text-decoration: underline;
+}
+
+/* --- Diseño responsive para móviles --- */
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+        background-color: rgba(47, 82, 134, 0.998);
+    }
+
+    .recover-password-container {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        gap: 15px;
+    }
+
+    .recover-password-container .form-title {
+        font-size: 22px;
+    }
+
+    .recover-password-container .form-description {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .recover-password-container .form-group input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .recover-password-container .form-submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .recover-password-container .signup-link {
+        font-size: 13px;
+        text-align: center;
+    }
+}

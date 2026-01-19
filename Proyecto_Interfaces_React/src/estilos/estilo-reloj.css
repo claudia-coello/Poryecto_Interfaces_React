@@ -1,0 +1,266 @@
+/* ===========================
+   RESET / LAYOUT BASICO
+=========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* para que main empuje footer al fondo */
+    background: #1e1e1e;
+    color: white;
+    font-family: "Alexandria", Arial, sans-serif;
+}
+
+/* Mantener main flexible para que el footer quede abajo */
+main {
+    flex: 1 auto;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.menu {
+    width: 100%;
+    padding: 15px 30px;
+    background: #0e1a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f4c542;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* perfil */
+.perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.perfil-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.perfil-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #243a63;
+    background: url('../iconos/profile.png') center/cover no-repeat;
+}
+
+/* dropdown */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: #2c2c2c;
+    width: 170px;
+    border-radius: 10px;
+    display: none; /* se controla por inline style en JS */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    z-index: 50;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    background: #243a63;
+    color: #f4c542;
+}
+
+/* ===========================
+   CONTENEDOR POMODORO
+=========================== */
+.video-background-container {
+    position: relative;
+    flex: 1 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Pomodoro card */
+.contenedor-pomodoro {
+    background-color: #0e1a2a;
+    padding: 40px 30px;
+    margin: 100px auto 0;
+    max-width: 550px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 4px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    z-index: 5;
+}
+footer
+
+/* Título y timer */
+.contenedor-pomodoro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #f4c542;
+}
+
+#timer {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 10px 0 20px;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+/* botones */
+.botones-pomodoro {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.botones-pomodoro button {
+    background-color: #243a63;
+    color: white;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .18s ease, background-color .18s ease;
+    font-size: 1rem;
+    min-width: 120px;
+}
+
+.botones-pomodoro button:hover {
+    background-color: #f4c542;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* ===========================
+   VIDEO DE FONDO
+=========================== */
+
+#video-fondo {
+    opacity: 1;
+    transition: opacity 3s ease;
+    position: fixed;
+    top: calc( (var(--nav-height, 70px)) ); /* fallback nav height variable */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - (var(--nav-height, 70px) * 2)); /* espacio entre nav y footer */
+    object-fit: cover;
+    z-index: -1; /* debajo del contenido (pomodoro tiene z-index 5) */
+    pointer-events: none;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #0e1a2a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    position: relative;
+    z-index: 50;
+}
+
+.contacto, .redes {
+    max-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.contacto a {
+    color: #f4c542;
+    text-decoration: none;
+}
+
+.redes p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.iconos img {
+    width: 35px;
+    margin: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.iconos img:hover {
+    transform: scale(1.2);
+}
+
+.extra {
+    background-color: #243a63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.extra:hover {
+    background-color: #f4c542;
+    color: #000;
+}
+
+/* ===========================
+   RESPONSIVIDAD
+=========================== */
+@media (max-width: 900px) {
+    #timer { font-size: 3.6rem; }
+    .contenedor-pomodoro { padding: 28px; max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+    #timer { font-size: 2.8rem; }
+    .botones-pomodoro button { width: 100%; max-width: 320px; }
+    .menu { padding: 12px 16px; }
+}
+
+@media screen and (max-width: 550px){
+    .nav-links{
+        display: none;
+    }
+}

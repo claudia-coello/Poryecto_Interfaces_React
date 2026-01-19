@@ -1,0 +1,152 @@
+body{
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    min-height: 100vh;        /* Ocupa toda la altura visible */
+    background: url('../iconos/pexels-vlada-karpovich-9969179.jpg') no-repeat;
+    background-size: cover;   /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    
+}
+
+.wrapper{
+    display: flex; /* Activa flexbox para centrar contenido */
+    width: 420px;  /* Ancho del contenedor */
+    background: transparent;   /* Fondo transparente */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde semitransparente */
+    backdrop-filter: blur(20px);  /* Difumina el fondo detrás */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);   /* Sombra suave */
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;  /* Espaciado interno */
+    margin: 90px auto 10px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;  /* Permite posicionar elementos dentro */
+    width: 100%;         /* Ocupa todo el ancho disponible */
+    height: 50px;
+    margin: 30px 0;      /* Espacio vertical entre campos */
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;  /* Quita el borde de enfoque predeterminado del navegador */
+
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;  /* Coloca el ícono dentro del campo de entrada */
+    right: 20px;         /* Lo alinea a la derecha */
+    top: 50%;            /* Lo centra verticalmente */
+    transform: translateY(-50%);      /* Ajusta la posición exacta al centro */
+    font-size: 20px;
+
+}
+
+.wrapper .remember-forgot{
+    display: flex;  /* Coloca los elementos en una misma línea */
+    justify-content: space-between;    /* Separa los elementos a los extremos */
+    font-size: 14.5px;
+    margin: -15px 0 15px;    /* Ajusta el espacio arriba y abajo */
+}
+
+.remember-forgot label input{
+    accent-color: #fff; /* Cambia el color del checkbox al blanco */
+    margin-right: 3px;  /* Deja un pequeño espacio entre el checkbox y el texto */
+}
+
+.remember-forgot a{
+    color: #fff; /* Color blanco para el enlace */
+    text-decoration: none;   /* Quita el subrayado del enlace */
+
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+}
+
+.wrapper .btn{
+    width: 100%;  /* Botón ocupa todo el ancho */
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;  /* Sin contorno al hacer clic */
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;   /* Cambia el cursor a mano */
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;  /* Texto en negrita */
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;  /* Espacio interno para evitar que el contenido toque los bordes */
+        background-position: top center;  /* Centra la imagen de fondo en la parte superior */
+    }
+
+    .wrapper {
+        width: 100%;  /* El contenedor ocupa todo el ancho disponible */
+        padding: 20px;  /* Reduce el relleno interno */
+        border-radius: 8px;   /* Bordes ligeramente redondeados */
+    }
+
+    .wrapper h1 {
+        font-size: 26px;  /* Tamaño de título más pequeño para móviles */
+    }
+
+    .input-box {
+        margin: 20px 0; /* Espaciado más compacto */
+        height: 45px;   /* Ajusta la altura del campo */
+    }
+
+    .input-box input {
+        font-size: 14px;  /* Texto más pequeño */
+        padding: 15px 40px 15px 15px;  /* Espacio interior ajustado */
+    }
+
+    .wrapper .btn {
+        height: 40px;   /* Botón más compacto */
+        font-size: 15px;     /* Texto ligeramente reducido */
+    }
+
+    .register-link {
+        font-size: 13px;  /* Texto pequeño para enlaces */
+    }
+}
+

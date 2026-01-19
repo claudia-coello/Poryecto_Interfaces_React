@@ -1,0 +1,54 @@
+/* =================== FOOTER =================== */
+footer {
+    background-color: #0e1a2a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 10px; 
+    position: relative;
+    z-index: 50;
+     width: 100vw;
+}
+
+.contacto, .redes {
+    max-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.contacto a {
+    color: #f4c542;
+    text-decoration: none;
+}
+
+.redes p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.iconos img {
+    width: 35px;
+    margin: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.iconos img:hover {
+    transform: scale(1.2);
+}
+
+.extra {
+    background-color: #243a63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.extra:hover {
+    background-color: #f4c542;
+    color: #000;
+}
