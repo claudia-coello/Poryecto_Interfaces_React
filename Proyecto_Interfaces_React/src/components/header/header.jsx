@@ -24,7 +24,7 @@ const Header = () => {
 
             <div className={`${styles.navLinks} ${menuAbierto ? styles.activo : ''}`}>
                 <Link to="/planes-servicio">Contrátanos</Link>
-                <Link to="/login">Iniciar Sesión</Link>
+                <Link to="/pomodoro">Iniciar Sesión</Link>
             </div>
         </nav>
     );
