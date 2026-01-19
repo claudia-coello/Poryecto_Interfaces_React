@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom"; // Importa Link
 import styles from './header.module.css';
 import relojImg from '../../assets/reloj.png';
 
@@ -8,10 +9,10 @@ const Header = () => {
     return (
         <nav className={styles.menu}>
             <div className={styles.logoElementos}>
-                <a className={styles.logo} href="/">
+                <Link className={styles.logo} to="/">
                     <img src={relojImg} alt="Icono reloj" className={styles.relojImg} />
                     Fix<span>Time</span>
-                </a>
+                </Link>
             </div>
 
             <button 
@@ -22,8 +23,8 @@ const Header = () => {
             </button>
 
             <div className={`${styles.navLinks} ${menuAbierto ? styles.activo : ''}`}>
-                <a href="/servicios">Contrátanos</a>
-                <a href="/login">Iniciar Sesión</a>
+                <Link to="/planes-servicio">Contrátanos</Link>
+                <Link to="/login">Iniciar Sesión</Link>
             </div>
         </nav>
     );
