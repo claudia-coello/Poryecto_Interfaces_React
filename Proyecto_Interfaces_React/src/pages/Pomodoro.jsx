@@ -17,7 +17,7 @@ function Pomodoro() {
                 >
                     <source src="/videos/vid_fondo_reloj.mp4" type="video/mp4" />
                 </video>
-
+ 
 
                 <div className="contenedor-pomodoro">
                     <h2>Reloj Pomodoro</h2>
