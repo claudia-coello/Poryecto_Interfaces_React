@@ -3,27 +3,71 @@
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  margin: 0px 0px 20px;
 }
 
 .hero {
-  background-image: url("../assets/fondo-inicio.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
 .contenido {
-  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+  background: rgba(245, 245, 245, 0.95);
   padding: 40px;
   border-radius: 15px;
-  text-align: center;
-  max-width: 600px;
+  overflow: hidden;
+}
+
+/* Líneas metálicas visibles */
+.contenido::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(180, 180, 180, 0.35) 0%,
+    rgba(180, 180, 180, 0.35) 25%,
+    rgba(255, 255, 255, 0.65) 45%,
+    rgba(180, 180, 180, 0.35) 65%,
+    rgba(180, 180, 180, 0.35) 100%
+  );
+  background-size: 250% 100%;
+  animation: metalMove 14s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Texto encima */
+.contenido h1,
+.contenido h2 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Movimiento lento */
+@keyframes metalMove {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 

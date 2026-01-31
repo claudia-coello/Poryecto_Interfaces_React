@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
 }
 
 body {
@@ -14,8 +15,6 @@ body {
     color: #464646;      /* color del texto */
     font-weight: 700;    /* lo hace más gruesito */
 }
-
-
 
 .tema1 {
     background-repeat: repeat-x;

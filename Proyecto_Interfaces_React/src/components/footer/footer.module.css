@@ -1,14 +1,11 @@
-/* =================== FOOTER =================== */
-footer {
+.footer {
     background-color: #0e1a2a;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px 10px; 
-    position: relative;
-    z-index: 50;
-     width: 100vw;
+    padding: 30px 10px;
+    width: 100%;
 }
 
 .contacto, .redes {
@@ -27,6 +24,13 @@ footer {
     color: #ccc;
 }
 
+/* 🔴 AQUÍ ESTABA EL PROBLEMA DE LAS IMÁGENES */
+.iconos {
+    display: flex;
+    flex-direction: row; /* o row */
+    align-items: center;
+}
+
 .iconos img {
     width: 35px;
     margin: 8px;
@@ -38,17 +42,11 @@ footer {
     transform: scale(1.2);
 }
 
-.extra {
+.extraBtn {
     background-color: #243a63;
     color: #fff;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.extra:hover {
-    background-color: #f4c542;
-    color: #000;
 }

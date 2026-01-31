@@ -1,10 +1,13 @@
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
 import "../estilos/landing.css";
+// import fondo from "../videos/fondo_index.mp4";
 
 // imagenes
 import focusIcon from "../assets/focus.png";
 import planificadorIcon from "../assets/planificador.png";
+import ahorroIcon from "../assets/ahorro-de-dinero.png";
+import concentracionIcon from "../assets/concentracion.png";
 
 const Landing = () => {
     const toggleCard = (e) => {
@@ -16,13 +19,20 @@ const Landing = () => {
         <>
             <Header />
             <div className="cuerpo">
-                <header class="hero">
-                    <div class="contenido">
+                <div className="hero">
+                    <video
+                        className="video-bg"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    > <source src="/videos/fondo_index.mp4" type="video/mp4"/></video>
+                    
+                    <div className="contenido">
                         <h1>Organiza tu tiempo</h1>
                         <h2>Gestiona tu propio organizador en línea.</h2>
                     </div>
-                </header>
-
+                </div>
 
                 <div className="cards-container">
                     {/* Tarjeta 1 */}
@@ -56,6 +66,7 @@ const Landing = () => {
                     {/* Tarjeta 3 */}
                     <div className="card">
                         <h5 className="card-title">Concéntrate Mejor</h5>
+                        <img src={concentracionIcon} alt="Concentrate con nosotros" />
                         <div className="card-text">
                             <p>Evita las interrupciones mientras nos utilizas.</p>
                             <ul>
@@ -69,6 +80,7 @@ const Landing = () => {
                     {/* Tarjeta 4 */}
                     <div className="card">
                         <h5 className="card-title">Precios Accesibles</h5>
+                        <img src={ahorroIcon} alt="Ahorra con nosotros" className="card-img" />
                         <div className="card-text">
                             <p>Trabaja completamente gratis o con nuestros servicios extra.</p>
                             <ul>

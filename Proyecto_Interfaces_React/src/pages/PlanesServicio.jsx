@@ -1,66 +1,83 @@
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
+
 const PlanesServicio = () => {
   return (
-    <>
-    <Header></Header>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+
       <section
         id="servicios"
-        className="bg-[#243a63] text-center py-[40px] px-[20px]"
+        className="relative flex-1 flex flex-col justify-center bg-[#243a63] text-center px-[20px] overflow-hidden"
       >
-        <h2>Planes de servicio</h2>
+        {/* Video de fondo */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/videos/reloj_arena.mp4" type="video/mp4" />
+        </video>
 
-        <div className="flex justify-center flex-wrap gap-[30px] relative z-[50] planes-container">
+        {/* Título */}
+        <h2 className="relative z-10 text-white text-3xl mb-6">
+          Planes de servicio
+        </h2>
+
+        {/* Planes */}
+        <div className="relative z-10 flex justify-center flex-wrap gap-[30px]">
 
           {/* Plan Gratuito */}
-          <div className="plan relative z-[50] bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
+          <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
               Plan Gratuito
             </h3>
-            <ul className="text-left list-none p-0 my-[15px]">
-              <li className="mb-2">Costo: $0.00</li>
-              <li className="mb-2">Usuario individual</li>
-              <li className="mb-2">Sincronización de un dispositivo</li>
-              <li className="mb-2">Recordatorios básicos</li>
-              <li className="mb-2">Incluye anuncios discretos</li>
-              <li className="mb-2">Colaboración no disponible</li>
+            <ul className="text-left my-[15px]">
+              <li>Costo: $0.00</li>
+              <li>Usuario individual</li>
+              <li>Sincronización de un dispositivo</li>
+              <li>Recordatorios básicos</li>
+              <li>Incluye anuncios discretos</li>
+              <li>Colaboración no disponible</li>
             </ul>
-            <button className="bg-[#243a63] text-white border-0 px-[20px] py-[10px] rounded-[10px] cursor-pointer transition-colors duration-300 hover:bg-[#0e1a2a]">
+            <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
               Más información
             </button>
           </div>
 
           {/* Plan Mensual */}
-          <div className="plan relative z-[50] bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
+          <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
               Plan Mensual
             </h3>
-            <ul className="text-left list-none p-0 my-[15px]">
-              <li className="mb-2">Costo: $4.99</li>
-              <li className="mb-2">Sincronización multiplataforma</li>
-              <li className="mb-2">Recordatorios avanzados</li>
-              <li className="mb-2">5 GB de espacio en la nube</li>
-              <li className="mb-2">Colaboración disponible</li>
-              <li className="mb-2">Archivos activos ilimitados</li>
+            <ul className="text-left my-[15px]">
+              <li>Costo: $4.99</li>
+              <li>Sincronización multiplataforma</li>
+              <li>Recordatorios avanzados</li>
+              <li>5 GB en la nube</li>
+              <li>Colaboración disponible</li>
+              <li>Archivos ilimitados</li>
             </ul>
-            <button className="bg-[#243a63] text-white border-0 px-[20px] py-[10px] rounded-[10px] cursor-pointer transition-colors duration-300 hover:bg-[#0e1a2a]">
+            <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
               Más información
             </button>
           </div>
 
           {/* Plan Anual */}
-          <div className="relative z-[50] bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
+          <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
               Plan Anual
             </h3>
-            <ul className="text-left list-none p-0 my-[15px]">
-              <li className="mb-2">Costo: $49.99</li>
-              <li className="mb-2">Funciones del plan mensual</li>
-              <li className="mb-2">Soporte de alta prioridad</li>
-              <li className="mb-2">Acceso temprano a funciones especiales</li>
-              <li className="mb-2">Funciones de administrador</li>
+            <ul className="text-left my-[15px]">
+              <li>Costo: $49.99</li>
+              <li>Funciones del plan mensual</li>
+              <li>Soporte prioritario</li>
+              <li>Acceso anticipado</li>
+              <li>Funciones de administrador</li>
             </ul>
-            <button className="bg-[#243a63] text-white border-0 px-[20px] py-[10px] rounded-[10px] cursor-pointer transition-colors duration-300 hover:bg-[#0e1a2a]">
+            <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
               Más información
             </button>
           </div>
@@ -68,11 +85,8 @@ const PlanesServicio = () => {
         </div>
       </section>
 
-      <div id="area"></div>
-
-      
-    <Footer></Footer>
-    </>
+      <Footer />
+    </div>
   );
 };
 

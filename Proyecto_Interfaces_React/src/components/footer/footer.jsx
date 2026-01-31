@@ -1,6 +1,7 @@
 import styles from './footer.module.css';
 import fbIcon from '../../assets/facebook.png';
 import waIcon from '../../assets/whatsapp.png';
+import redditIcon from "../../assets/reddit.png";
 
 const Footer = () => {
     return (
@@ -12,6 +13,7 @@ const Footer = () => {
                 <div className={styles.iconos}>
                     <img src={fbIcon} alt="Facebook" />
                     <img src={waIcon} alt="WhatsApp" />
+                    <img src={redditIcon} alt="Whatsapp" />
                 </div>
                 <p>© 2024 FixTime - Todos los derechos reservados</p>
             </div>
