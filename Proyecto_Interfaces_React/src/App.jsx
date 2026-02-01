@@ -7,7 +7,7 @@ import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
 import NotFound from "./pages/NotFound";
 import PlanesServicio from './pages/PlanesServicio.jsx';
-import Pomodoro from './pages/Pomodoro.jsx';
+import Pomodoro from './pages/pomodoro/Pomodoro.jsx';
 
 import "./index.css"
 
