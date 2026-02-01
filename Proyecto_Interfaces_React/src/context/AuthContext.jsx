@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth"; // 👈 importa signOut
 import { auth } from "../firebase/firebase.js";
 
 const AuthContext = createContext();
@@ -7,6 +7,15 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+    }
+  };
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (currentUser) => {
@@ -17,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user }}>
+    <AuthContext.Provider value={{ user, logout }}>
       {!loading && children}
     </AuthContext.Provider>
   );
