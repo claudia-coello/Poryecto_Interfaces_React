@@ -1,8 +1,6 @@
 // import './App.css'
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom"; 
 
-
-// import Landing from './pages/landing/landing.jsx'; 
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
 import NotFound from "./pages/NotFound";
