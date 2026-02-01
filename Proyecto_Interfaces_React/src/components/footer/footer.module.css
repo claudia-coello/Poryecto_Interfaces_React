@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     padding: 30px 10px;
     width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .contacto, .redes {
