@@ -68,17 +68,24 @@ const Dashboard = () => {
             {showEdit && (
               <div className="modal">
                 <h3>Editar información</h3>
-                <input
-                  type="text"
-                  placeholder="Nombre"
-                  value={displayName}
-                  onChange={(e) => setDisplayName(e.target.value)}
-                />
-                <textarea
-                  placeholder="Descripción"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                />
+
+                <div className="edit-box">
+                  <label>Nombre</label>
+                  <input
+                    type="text"
+                    value={displayName}
+                    onChange={(e) => setDisplayName(e.target.value)}
+                    placeholder="Escribe tu nombre"
+                  />
+
+                  <label>Descripción</label>
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder="Escribe tu descripción"
+                  />
+                </div>
+
                 <button onClick={handleSaveInfo}>Guardar</button>
                 <button onClick={() => setShowEdit(false)}>Cancelar</button>
               </div>
