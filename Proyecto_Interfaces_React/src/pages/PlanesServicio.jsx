@@ -1,7 +1,9 @@
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
+import { useNavigate } from "react-router-dom";
 
 const PlanesServicio = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -32,7 +34,7 @@ const PlanesServicio = () => {
           {/* Plan Gratuito */}
           <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
-              Plan Gratuito
+              Plan FREE
             </h3>
             <ul className="text-left my-[15px]">
               <li>Costo: $0.00</li>
@@ -43,14 +45,14 @@ const PlanesServicio = () => {
               <li>Colaboración no disponible</li>
             </ul>
             <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
-              Más información
+              Registrese
             </button>
           </div>
 
           {/* Plan Mensual */}
           <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
-              Plan Mensual
+              Plan Pro
             </h3>
             <ul className="text-left my-[15px]">
               <li>Costo: $4.99</li>
@@ -59,26 +61,29 @@ const PlanesServicio = () => {
               <li>5 GB en la nube</li>
               <li>Colaboración disponible</li>
               <li>Archivos ilimitados</li>
+              <li>Acceso por un mes</li>
             </ul>
             <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
-              Más información
+              Registrese
             </button>
           </div>
 
           {/* Plan Anual */}
           <div className="bg-[#f8d77b] text-black w-[300px] rounded-[12px] p-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.5)]">
             <h3 className="bg-[#243a63] text-white rounded-[8px] p-[10px]">
-              Plan Anual
+              Plan Ultra
             </h3>
             <ul className="text-left my-[15px]">
               <li>Costo: $49.99</li>
-              <li>Funciones del plan mensual</li>
+              <li>Funciones del plan Pro</li>
               <li>Soporte prioritario</li>
               <li>Acceso anticipado</li>
               <li>Funciones de administrador</li>
+              <li>50 GB en la nube</li>
+              <li>Acceso por un año</li>
             </ul>
             <button className="bg-[#243a63] text-white px-[20px] py-[10px] rounded-[10px] hover:bg-[#0e1a2a]">
-              Más información
+              Registrese
             </button>
           </div>
 
