@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.register__container {
+  max-width: 400px;
+  width: 90%; /* Mejor para móviles */
+  margin: 90px auto 60px;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 16px; /* Bordes más redondeados y modernos */
+  /* Sombra más elegante y difuminada */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.register__title {
+  text-align: center;
+  margin-bottom: -30px;
+  color: #04348d; 
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.register__container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espaciado uniforme entre elementos */
+}
+
+.register__container input {
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1.5px solid #e5e7eb; /* Borde más fino y claro */
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #f9fafb; /* Fondo sutil */
+  transition: all 0.3s ease;
+  color: #374151;
+}
+
+.register__container input:focus {
+  outline: none;
+  border-color: #243a63;
+  background-color: #ffffff; /* El fondo se aclara al escribir */
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); /* Efecto de brillo suave */
+}
+
+.register__container button {
+  padding: 14px;
+  background-color: #243a63;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register__container button:hover {
+  background-color: #00318b;
+  transform: translateY(-1px); /* Efecto de elevación */
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.register__container button:active {
+  transform: translateY(0);
+}
+
+/* Estilo para el link de registro */
+.register__container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.register__container a {
+  color: #f7b601;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register__container a:hover {
+  text-decoration: underline;
+}
