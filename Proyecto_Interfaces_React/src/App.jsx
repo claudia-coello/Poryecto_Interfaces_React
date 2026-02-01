@@ -17,10 +17,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <nav>
-          <Link hide="true" to="/">Home</Link>
-        </nav>
-
         <Routes>
           <Route index element={<Landing/>}/>
           <Route path="login" element={<Login/>}/>

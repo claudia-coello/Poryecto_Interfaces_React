@@ -1,35 +1,46 @@
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import "./DashboardUser.css";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  // Simulado (luego puede venir de Firestore)
   const plan = "Premium";
   const activities = ["Estudiar React", "Reunión grupal", "Pomodoro 25min"];
 
   return (
-    <div>
-      <h1>Bienvenido, {user.displayName || user.email}</h1>
-      <p>Plan actual: {plan}</p>
+    <div className="dashboard-wrapper">
+      <div className="contenedor-pomodoro dashboard-card">
+        <h1 className="dashboard-title">
+          Bienvenido, <span>{user.displayName || user.email}</span>
+        </h1>
 
-      <button onClick={() => navigate("/pomodoro")}>
-        Ir al Reloj
-      </button>
+        <p className="dashboard-plan">
+          Plan actual: <strong>{plan}</strong>
+        </p>
 
-      <button onClick={() => navigate("/activities")}>
-        Ver Actividades
-      </button>
+        <div className="botones-pomodoro dashboard-buttons">
+          <button onClick={() => navigate("/pomodoro")}>
+            ⏱ Ir al Reloj
+          </button>
 
-      <h3>Actividades guardadas</h3>
-      <ul>
-        {activities.map((act, i) => (
-          <li key={i}>{act}</li>
-        ))}
-      </ul>
+          <button onClick={() => navigate("/activities")}>
+            📋 Ver Actividades
+          </button>
+        </div>
+
+        <h3 className="dashboard-subtitle">Actividades guardadas</h3>
+
+        <ul className="dashboard-list">
+          {activities.map((act, i) => (
+            <li key={i}>{act}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default Dashboard;
+

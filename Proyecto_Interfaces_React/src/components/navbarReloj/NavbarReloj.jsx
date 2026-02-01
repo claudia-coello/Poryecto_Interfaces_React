@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Dashboard from "../../pages/dashboardUser/DashboardUser";
 import "./NavbarReloj.css";
 
 function NavbarReloj() {
@@ -47,7 +46,7 @@ function NavbarReloj() {
               <button
                 onClick={() => {
                   setOpen(false);
-                  navigate("../dashboardUser/DashboardUser");
+                  navigate("/dashboard");
                 }}
               >
                 Perfil
