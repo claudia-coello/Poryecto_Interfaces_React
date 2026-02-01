@@ -1,46 +1,72 @@
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./DashboardUser.css";
+import bgVideo from "../../assets/videos/vid_dashboard_user.mp4";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const plan = "Premium";
-  const activities = ["Estudiar React", "Reunión grupal", "Pomodoro 25min"];
-
   return (
-    <div className="dashboard-wrapper">
-      <div className="contenedor-pomodoro dashboard-card">
-        <h1 className="dashboard-title">
-          Bienvenido, <span>{user.displayName || user.email}</span>
-        </h1>
+    <div className="dashboard-video-wrapper">
+      {/* VIDEO DE FONDO */}
+      <video
+        className="background-video"
+        src={bgVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* CONTENIDO DEL DASHBOARD */}
+      <div className="dashboard-page">
+        {/* NAVBAR */}
+        <nav className="dashboard-navbar">
+          <a href="#" className="logo">Fix<span>time</span></a>
+          <div className="nav-links">
+            <button onClick={() => navigate("/pomodoro")}>Reloj</button>
+            <button onClick={() => navigate("/activities")}>Planificador</button>
+          </div>
+        </nav>
 
-        <p className="dashboard-plan">
-          Plan actual: <strong>{plan}</strong>
-        </p>
+        {/* CONTENIDO */}
+        <div className="dashboard-content">
+          {/* PERFIL */}
+          <aside className="profile-card">
+            <div className="avatar">Foto User</div>
 
-        <div className="botones-pomodoro dashboard-buttons">
-          <button onClick={() => navigate("/pomodoro")}>
-            ⏱ Ir al Reloj
-          </button>
+            <button>Cambiar información</button>
+            <button className="secondary">Cerrar sesión</button>
+            <button className="danger">Eliminar usuario</button>
+          </aside>
 
-          <button onClick={() => navigate("/activities")}>
-            📋 Ver Actividades
-          </button>
+          {/* INFO */}
+          <section className="info-card">
+            <div className="info-row">
+              <span>Usuario:</span>
+              <strong>{user.displayName || user.email}</strong>
+            </div>
+
+            <div className="info-row plan-row">
+              <span>Tipo de plan:</span>
+              <strong>Premium</strong>
+              <button className="upgrade">Mejorar</button>
+            </div>
+
+            <div className="description-box">
+              <span>Descripción:</span>
+              <p>
+                Aquí puede ir una descripción del usuario, estadísticas,
+                progreso o información relevante del sistema.
+              </p>
+            </div>
+          </section>
         </div>
-
-        <h3 className="dashboard-subtitle">Actividades guardadas</h3>
-
-        <ul className="dashboard-list">
-          {activities.map((act, i) => (
-            <li key={i}>{act}</li>
-          ))}
-        </ul>
       </div>
     </div>
   );
 };
 
 export default Dashboard;
+
 
