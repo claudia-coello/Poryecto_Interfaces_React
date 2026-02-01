@@ -1,0 +1,151 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #4CAF50;
+  cursor: move;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.task-item.completed {
+  opacity: 0.8;
+  border-left-color: #8BC34A;
+}
+
+.task-item.dragging {
+  opacity: 0.5;
+  transform: rotate(2deg);
+}
+
+.task-info {
+  flex: 1;
+  margin-right: 1.5rem;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.task-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.task-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.task-item.completed .progress-fill {
+  background: linear-gradient(90deg, #8BC34A, #CDDC39);
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: right;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-check {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #cbd5e0;
+}
+
+.task-check:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+  transform: scale(1.05);
+}
+
+.task-check.completed {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.task-check.completed:hover {
+  background: #388E3C;
+  border-color: #388E3C;
+}
+
+.task-delete {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #cbd5e0;
+}
+
+.task-delete:hover {
+  border-color: #f44336;
+  color: #f44336;
+  transform: scale(1.05);
+}
+
+.task-check i,
+.task-delete i {
+  font-size: 1rem;
+}

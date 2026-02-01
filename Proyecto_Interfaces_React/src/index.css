@@ -46,3 +46,62 @@ h2 {
     font-weight: bold;
     text-align: center;
 }
+
+/* Añade esto a tu index.css o App.css */
+
+/* Estilos para la página completa */
+.dashboard-container {
+  display: flex;
+  min-height: calc(100vh - 80px); /* Resta la altura del navbar */
+  background: #f5f7fa;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: white;
+  border-radius: 20px 0 0 0;
+  margin-left: -20px; /* Solapa con sidebar */
+}
+
+/* Animaciones para transiciones suaves */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

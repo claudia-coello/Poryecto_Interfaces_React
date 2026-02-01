@@ -1,0 +1,111 @@
+.category-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 400px; /* Esto hace que la sección sea más angosta */
+  width: 100%;      /* Asegura que sea responsivo */
+  margin: 0 auto;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.category-header {
+  background: linear-gradient(90deg, #f7fafc, #edf2f7);
+  padding: 1.5rem;
+  border-left: 5px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #010101;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-task-btn,
+.category-menu-btn {
+  width: 60px;
+  height: 35px;
+  min-width: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: white;
+  color: #0b285e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-btn:hover {
+  background: #243a63;
+  color: white;
+  transform: scale(1.1);
+}
+
+.category-menu-btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+.task-list {
+  padding: 1.5rem;
+  min-height: 200px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: #cbd5e0;
+  margin-bottom: 1rem;
+}
+
+.empty-message {
+  color: #718096;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.btn-add-first-task {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #243a63;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-first-task:hover {
+  background: #0059ff;
+  transform: translateY(-2px);
+}

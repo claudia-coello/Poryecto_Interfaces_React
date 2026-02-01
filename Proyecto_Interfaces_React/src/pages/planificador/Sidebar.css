@@ -1,0 +1,145 @@
+/* 1. Contenedor Principal (Azul Marino Profundo) */
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: #0e1a2b; /* El color exacto de la imagen */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+}
+
+/* 2. Sección Usuario */
+.user-section {
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    font-size: 3rem;
+    color: #f4c542; /* Amarillo mostaza del avatar */
+}
+
+.greeting {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* 3. Sección Fecha Larga */
+.date-section {
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.current-date {
+    text-align: center;
+    color: #a0aec0;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 4. El Círculo de "HOY" */
+.today-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.today-label {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.today-number {
+    width: 70px;
+    height: 70px;
+    background-color: #f4c542;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(244, 197, 66, 0.4);
+}
+
+.today-number span {
+    color: #0e1a2b;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* 5. Rejilla de Días (Parte inferior) */
+.week-days-section {
+    margin-top: auto; /* Empuja los días al final */
+}
+
+.week-days-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Estilo para cada fila de día */
+.day-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.03); /* Fondo casi invisible */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Cuando el día es HOY (esHoy: true) */
+.day-box.active {
+    background-color: #f4c542;
+    color: #0e1a2b;
+    transform: scale(1.02);
+}
+
+.day-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+.day-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Ajuste de colores cuando está activo */
+.day-box.active .day-name,
+.day-box.active .day-number {
+    color: #0e1a2b;
+}
+
+/* Scrollbar para la barra lateral si es necesario */
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(244, 197, 66, 0.2);
+    border-radius: 10px;
+}

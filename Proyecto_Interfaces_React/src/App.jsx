@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import PlanesServicio from './pages/PlanesServicio.jsx';
 import Pomodoro from './pages/pomodoro/Pomodoro.jsx';
 import Dashboard from "./pages/dashboardUser/DashboardUser.jsx";
+import Pomodoro from './pages/Pomodoro.jsx';
+import Planificador from "./pages/planificador/Planificador.jsx"
 
 import "./index.css"
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute.jsx";
@@ -17,11 +19,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <nav>
+          <Link hide="true" to="/"></Link>
+        </nav>
+
         <Routes>
           <Route index element={<Landing/>}/>
           <Route path="login" element={<Login/>}/>
           <Route path="/register" element={<Register />} />
           <Route path="/planes-servicio" element={<PlanesServicio />} />
+          <Route path="/planificador" element={<Planificador/>}></Route>
           <Route path="/pomodoro" element={<Pomodoro />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="*" element={<NotFound/>}/>

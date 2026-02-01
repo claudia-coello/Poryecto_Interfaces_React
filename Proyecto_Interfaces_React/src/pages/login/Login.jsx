@@ -16,7 +16,7 @@ const Login = () => {
         try {
             await loginUser(email,password);
             alert("Inicio de sesion exitoso")
-            navigate("/dashboard");
+            navigate("/planificador");
         } catch (error) {
             console.error(error)
             alert("Correo o contraseña incorrectos")
