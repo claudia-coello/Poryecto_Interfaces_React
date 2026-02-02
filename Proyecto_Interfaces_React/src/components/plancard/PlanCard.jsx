@@ -28,8 +28,4 @@ function PlanCard({ plan, costo, beneficios }) {
   );
 }
 
-<<<<<<< HEAD
 export default PlanCard;
-=======
-export default PlanCard;
->>>>>>> 94351e0d45791e95e89538d303c5f1e3e1ef6ede
