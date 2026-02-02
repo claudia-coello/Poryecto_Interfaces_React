@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import "./NavbarReloj.css";
 
 function NavbarReloj() {
@@ -26,8 +26,8 @@ function NavbarReloj() {
       </a>
 
       <div className="menu">
-        <a href="#">Planificador</a>
-
+        <Link to="/planificador">Planificador</Link>
+        <Link to="/pomodoro">Reloj Pomodoro</Link>
         <div className="profile" ref={menuRef}>
           <button
             className="profile-btn"
@@ -53,14 +53,15 @@ function NavbarReloj() {
               </button>
 
               <button
-                className="logout"
-                onClick={() => {
-                  setOpen(false);
-                  // aquí luego puedes poner lógica de logout
+              className="logout"
+              onClick={() => {
+                setOpen(false); // Cierra el menú desplegable
+                // 1. Borrar los datos de sesión (opcional pero recomendado)
+                localStorage.removeItem('username'); 
+                // 2. Redirigir al Login
+                navigate("/"); 
                 }}
-              >
-                Salir
-              </button>
+                >Salir</button>
             </div>
           )}
 

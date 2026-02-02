@@ -12,6 +12,8 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
               0 8px 10px -6px rgba(0, 0, 0, 0.1);
   font-family: 'Inter', sans-serif;
+  z-index: 2;
+  position: relative;
 }
 
 .login__title {
@@ -74,7 +76,7 @@
 /* Estilo para el link de registro */
 .login__container p {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0;
   font-size: 16px;
   color: #6b7280;
 }
@@ -87,4 +89,19 @@
 
 .login__container a:hover {
   text-decoration: underline;
+}
+.video-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.login-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }

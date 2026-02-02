@@ -7,7 +7,7 @@ function Navbar() {
 
       <div className="flex items-center gap-[30px]">
         <a
-          href="#"
+          href="../../pages/planificador/Planificador.jsx"
           className="no-underline text-white text-base px-3 py-2 transition duration-300 hover:text-[#f4c542]"
         >
           Planificador

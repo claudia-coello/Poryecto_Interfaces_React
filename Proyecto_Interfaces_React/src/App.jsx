@@ -1,15 +1,14 @@
 // import './App.css'
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom"; 
 
-
-import Landing from './pages/landing.jsx'; 
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
 import NotFound from "./pages/NotFound";
-import PlanesServicio from './pages/PlanesServicio.jsx';
+import PlanesServicio from './pages/planesServicios/PlanesServicio.jsx';
 import Pomodoro from './pages/pomodoro/Pomodoro.jsx';
 import Dashboard from "./pages/dashboardUser/DashboardUser.jsx";
 import Planificador from "./pages/planificador/Planificador.jsx"
+import Landing from "./pages/landing/landing.jsx";
 
 import "./index.css"
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute.jsx";

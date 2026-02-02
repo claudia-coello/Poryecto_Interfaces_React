@@ -53,7 +53,7 @@ const Dashboard = () => {
           <a href="#" className="logo">Fix<span>time</span></a>
           <div className="nav-links">
             <button onClick={() => navigate("/pomodoro")}>Reloj</button>
-            <button onClick={() => navigate("/activities")}>Planificador</button>
+            <button onClick={() => navigate("/planificador")}>Planificador</button>
           </div>
         </nav>
 
