@@ -9,7 +9,6 @@ import NotFound from "./pages/NotFound";
 import PlanesServicio from './pages/PlanesServicio.jsx';
 import Pomodoro from './pages/pomodoro/Pomodoro.jsx';
 import Dashboard from "./pages/dashboardUser/DashboardUser.jsx";
-import Pomodoro from './pages/Pomodoro.jsx';
 import Planificador from "./pages/planificador/Planificador.jsx"
 
 import "./index.css"
