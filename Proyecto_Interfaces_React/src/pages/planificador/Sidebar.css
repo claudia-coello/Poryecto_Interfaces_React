@@ -26,10 +26,14 @@
     gap: 1rem;
 }
 
-.user-avatar {
-    font-size: 3rem;
-    color: #f4c542; /* Amarillo mostaza del avatar */
+.user-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f4c542;
 }
+
 
 .greeting {
     font-size: 0.9rem;

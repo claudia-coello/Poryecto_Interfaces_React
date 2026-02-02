@@ -1,13 +1,31 @@
 import { useState, useRef, useEffect } from "react";
-import {Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, db } from "../../firebase/firebase"; 
+import { doc, getDoc } from "firebase/firestore";
 import "./NavbarReloj.css";
 
 function NavbarReloj() {
   const [open, setOpen] = useState(false);
+  const [fotoPerfil, setFotoPerfil] = useState(""); // estado para la foto
   const menuRef = useRef(null);
   const navigate = useNavigate();
 
-  // Cerrar si se hace click fuera
+  // 🔹 Cargar foto de perfil desde Firestore
+  useEffect(() => {
+    const fetchFotoPerfil = async () => {
+      const user = auth.currentUser;
+      if (user) {
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        if (userDoc.exists()) {
+          const data = userDoc.data();
+          setFotoPerfil(data.fotoPerfil || ""); // si no hay, queda vacío
+        }
+      }
+    };
+    fetchFotoPerfil();
+  }, []);
+
+  // 🔹 Cerrar si se hace click fuera
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -36,9 +54,11 @@ function NavbarReloj() {
             Opciones
           </button>
 
+          {/* 🔹 Foto de perfil dinámica */}
           <img
-            src="/iconos/profile.jpg"
+            src={fotoPerfil || "/iconos/profile.jpg"} // si no hay foto, usa la default
             alt="Perfil"
+            className="avatar-img"
           />
 
           {open && (
@@ -53,18 +73,17 @@ function NavbarReloj() {
               </button>
 
               <button
-              className="logout"
-              onClick={() => {
-                setOpen(false); // Cierra el menú desplegable
-                // 1. Borrar los datos de sesión (opcional pero recomendado)
-                localStorage.removeItem('username'); 
-                // 2. Redirigir al Login
-                navigate("/"); 
+                className="logout"
+                onClick={() => {
+                  setOpen(false);
+                  localStorage.removeItem("username");
+                  navigate("/");
                 }}
-                >Salir</button>
+              >
+                Salir
+              </button>
             </div>
           )}
-
         </div>
       </div>
     </nav>
