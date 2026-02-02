@@ -8,6 +8,7 @@ import Notification from './Notification';
 import { useTasks } from './useTasks';
 import { useDate } from './useDate';
 import { useDragAndDrop } from './useDragAndDrop';
+import NavbarReloj from "../../components/navbarReloj/NavbarReloj";
 import './Planificador.css';
 
 const Planificador = () => {
@@ -92,8 +93,9 @@ const Planificador = () => {
   const categories = getCategories();
 
   return (
+    
     <div className="planificador-container">
-      
+      <NavbarReloj />
       
       <div className="dashboard-container">
         <Sidebar 
