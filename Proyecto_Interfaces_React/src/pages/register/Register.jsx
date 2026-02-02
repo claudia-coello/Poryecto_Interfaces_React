@@ -50,7 +50,8 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <>
+    <div className='justify-center min-h-screen bg-gradient-to-tr from-[#1e293b] via-[#334155] to-[#475569] p-4'>
       <Header />
       <section className="register__container">
         <h3 className="register__title">Registro</h3>
@@ -89,8 +90,11 @@ const Register = () => {
           </div>
         </form>
       </section>
-      <Footer />
+      
     </div>
+    <Footer />
+
+    </>
   );
 };
 

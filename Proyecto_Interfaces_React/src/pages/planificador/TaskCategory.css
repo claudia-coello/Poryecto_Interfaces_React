@@ -109,3 +109,36 @@
   background: #0059ff;
   transform: translateY(-2px);
 }
+
+/* --- Responsivo para Categorías --- */
+
+@media (max-width: 1024px) {
+    .category-card {
+        max-width: 100%; /* Permite que crezcan un poco más en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        max-width: 100%; /* Ocupa todo el ancho disponible en el móvil */
+        margin-bottom: 1.5rem; /* Separa las categorías verticalmente */
+    }
+
+    .category-title {
+        font-size: 1.1rem; /* Título un poco más pequeño para que no se amontone */
+    }
+
+    .category-header {
+        padding: 1rem; /* Menos relleno para ganar espacio */
+    }
+
+    .task-list {
+        padding: 1rem;
+        max-height: 400px; /* Un poco más corto para que no haya que hacer tanto scroll */
+    }
+
+    .add-task-btn, .category-menu-btn {
+        width: 45px; /* Botones más compactos */
+        min-width: 45px;
+    }
+}

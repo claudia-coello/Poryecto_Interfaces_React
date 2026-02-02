@@ -63,9 +63,21 @@
   justify-content: start;
 }
 
-@media (max-width: 1200px) {
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem; /* Menos espacio en los bordes para aprovechar la pantalla */
+  }
+
+  .page-title {
+    font-size: 1.5rem; /* El título 2rem es gigante para un móvil */
+    text-align: center;
+    width: 100%;
+  }
+
+  .content-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    align-items: center; /* Centramos todo para que se vea ordenado */
   }
 }
 

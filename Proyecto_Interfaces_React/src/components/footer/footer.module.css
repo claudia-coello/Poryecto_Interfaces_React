@@ -1,54 +1,91 @@
 .footer {
-    background-color: #0e1a2a;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px 10px;
+    /* Color sólido sin transparencias */
+    background-color: #0e1a2b; 
+    color: white;
+    padding: 3.5rem 2rem; /* Mucho espacio para que se vea premium */
     width: 100%;
+    
+    /* SEPARACIÓN CRÍTICA: */
+    /* Este borde superior crea el límite visual que evita que se vea 'transparente' */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    
+    /* SOMBRA DE PROFUNDIDAD: */
+    /* Esto hace que el contenido de arriba parezca estar 'sobre' el footer */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+    
     position: relative;
     z-index: 10;
 }
 
-.contacto, .redes {
-    max-width: 300px;
-    text-align: center;
-    color: white;
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacto p {
+    margin: 0;
+    font-size: 1rem;
+    color: #cbd5e0;
 }
 
 .contacto a {
-    color: #f4c542;
+    color: #f4c542; /* Dorado que resalta */
     text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: color 0.3s ease;
 }
 
-.redes p {
-    font-size: 14px;
-    color: #ccc;
+.contacto a:hover {
+    color: #ffffff;
 }
 
-/* 🔴 AQUÍ ESTABA EL PROBLEMA DE LAS IMÁGENES */
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
 .iconos {
     display: flex;
-    flex-direction: row; /* o row */
-    align-items: center;
+    gap: 20px;
 }
 
 .iconos img {
-    width: 35px;
-    margin: 8px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    width: 40px;  /* Antes era 28px */
+    height: 40px; /* Antes era 28px */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); /* Sombra un poco más marcada */
 }
 
 .iconos img:hover {
-    transform: scale(1.2);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.redes p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
 }
 
 .extraBtn {
-    background-color: #243a63;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    background-color: #f4c542;
+    color: rgb(12, 12, 12);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.extraBtn:hover {
+    background-color: #cd8211;
+    color: #050505;
+    transform: scale(1.05);
 }

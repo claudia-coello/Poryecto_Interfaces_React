@@ -18,8 +18,10 @@ const Login = () => {
             alert("Inicio de sesion exitoso")
             navigate("/planificador");
         } catch (error) {
-            console.error(error)
-            alert("Correo o contraseña incorrectos")
+            if (error.code !== 'auth/invalid-credential') {
+            console.error("Error técnico:", error);
+        }
+        alert("Correo o contraseña incorrectos");
         }
     };
     return (
@@ -43,21 +45,32 @@ const Login = () => {
                     <h3 className="login__title">Inicio de sesión</h3>
 
                     <form onSubmit={handleSubmit}>
-                        <input
+                        <div className='relative w-full h-[50px] mb-4'>
+                            <input
                             type="email"
+                            className='w-full h-full border-2 rounded-[40px] text-[16px]'
                             placeholder="Correo electrónico"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
+                        <i className='bx bxs-user absolute right-[20px] top-1/2 -translate-y-1/2 text-[20px]'></i>
+                        </div>
 
-                        <input
+                        <div className='relative w-full h-[50px] mb-4'>
+                            <input
+                            className='w-full h-full border-2 rounded-[40px] text-[16px]'
                             type="password"
                             placeholder="Contraseña"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
-                        />
+                            />
+                        <i className='bx bxs-lock absolute right-[20px] top-1/2 -translate-y-1/2 text-[20px]'></i>
+                        </div>
+                        
+
+
 
                         <button type="submit">Ingresar</button>
 
